@@ -6,11 +6,15 @@ let total = 0;
 
 do {
   input = prompt('Введи число: ');
-  if (input === null) {
+  if (isNaN(input)) {
+    console.log(input);
+    alert('Неправильный ввод, попрбуй еще раз!');
+  } else if (input === null) {
     break;
+  } else {
+    numbers.push(input);
+    console.log(numbers);
   }
-  numbers.push(input);
-  console.log(numbers);
 } while (input !== null);
 
 for (const number of numbers) {
